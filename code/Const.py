@@ -1,11 +1,10 @@
 # C
 import pygame
 
-C_PURPLE = (128, 0, 128)
 C_BLUE = (5, 0, 95)
 C_WHITE = (255, 255, 255)
-C_GREEN = (0, 128, 0)
-C_CYAN = (0, 128, 128)
+C_GREEN = (174, 245, 0)
+C_CYAN = (106, 255, 252)
 
 # E
 EVENT_ENEMY = pygame.USEREVENT + 1
@@ -54,8 +53,8 @@ ENTITY_DAMAGE = {
     'Player1Shot': 25,
     'Player2': 1,
     'Player2Shot': 20,
-    'Bomb_01': 20,
-    'Bomb_02': 15,
+    'Bomb_01': 2,
+    'Bomb_02': 5,
 }
 
 ENTITY_SCORE = {
@@ -75,10 +74,8 @@ ENTITY_SCORE = {
 }
 
 ENTITY_SHOT_DELAY = {
-    'Player1': 20,
+    'Player1': 15,
     'Player2': 15,
-    'Bomb_01': 100,
-    'Bomb_02': 200,
 }
 
 # M
@@ -97,18 +94,18 @@ PLAYER_KEY_LEFT = {'Player1': pygame.K_LEFT,
                    'Player2': pygame.K_a}
 PLAYER_KEY_RIGHT = {'Player1': pygame.K_RIGHT,
                     'Player2': pygame.K_d}
-PLAYER_KEY_SHOOT = {'Player1': pygame.K_RCTRL,
-                    'Player2': pygame.K_LCTRL}
+PLAYER_KEY_SHOOT = {'Player1': pygame.K_LCTRL,
+                    'Player2': pygame.K_RCTRL}
 
 # S
-SPAWN_TIME = 4000
+SPAWN_TIME = 2000
 
 # T
 TIMEOUT_STEP = 100  # 100ms
 TIMEOUT_LEVEL = 20000  # 20s
 # W
-WIN_WIDTH = 576
-WIN_HEIGHT = 324
+WIN_WIDTH = 700
+WIN_HEIGHT = 393
 
 # S
 SCORE_POS = {'Title': (WIN_WIDTH / 2, 50),

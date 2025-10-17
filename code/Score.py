@@ -5,7 +5,7 @@ import pygame
 from pygame import Surface, Rect, KEYDOWN, K_RETURN, K_BACKSPACE, K_ESCAPE
 from pygame.font import Font
 
-from code.Const import C_BLUE, SCORE_POS, MENU_OPTION, C_WHITE
+from code.Const import C_BLUE, SCORE_POS, MENU_OPTION, C_WHITE, C_CYAN
 from code.DBProxy import DBProxy
 
 
@@ -61,7 +61,7 @@ class Score:
         pygame.mixer_music.load('sound/score.mp3')
         pygame.mixer_music.play(-1)
         self.window.blit(source=self.surf, dest=self.rect)
-        self.score_text(48, 'TOP 10 SCORE', C_BLUE, SCORE_POS['Title'])
+        self.score_text(48, 'TOP 10 SCORE', C_CYAN, SCORE_POS['Title'])
         self.score_text(20, 'NAME     SCORE           DATE      ', C_BLUE, SCORE_POS['Label'])
         db_proxy = DBProxy('DBScore')
         list_score = db_proxy.retrieve_top10()
@@ -82,7 +82,7 @@ class Score:
             pygame.display.flip()
 
     def score_text(self, text_size: int, text: str, text_color: tuple, text_center_pos: tuple):
-        text_font: Font = pygame.font.SysFont(name="Lucida Sans Typewriter", size=text_size)
+        text_font: Font = pygame.font.SysFont(name="Impact", size=text_size)
         text_surf: Surface = text_font.render(text, True, text_color).convert_alpha()
         text_rect: Rect = text_surf.get_rect(center=text_center_pos)
         self.window.blit(source=text_surf, dest=text_rect)

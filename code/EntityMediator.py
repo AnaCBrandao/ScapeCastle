@@ -22,7 +22,11 @@ class EntityMediator:
         valid_interaction = False
         if isinstance(ent1, Bomb) and isinstance(ent2, PlayerShot):
             valid_interaction = True
-        elif isinstance(ent1, PlayerShot) and isinstance(ent2, Bomb):
+        elif isinstance(ent1,PlayerShot) and isinstance(ent2, Bomb):
+            valid_interaction = True
+        elif isinstance(ent1, Player) and isinstance(ent2, Bomb):
+            valid_interaction = True
+        elif isinstance(ent1, PlayerShot) and isinstance(ent2, Player):
             valid_interaction = True
 
         if valid_interaction:  # if valid_interaction == True:
